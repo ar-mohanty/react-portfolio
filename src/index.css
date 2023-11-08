@@ -1,0 +1,278 @@
+@import url('https://fonts.cdnfonts.com/css/satoshi');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-color: rgb(20, 20, 20);
+  --card-color: rgb(23, 23, 23);
+}
+
+body{
+  background-color: #0D0A12;
+  margin: 0;
+  padding: 0;
+}
+
+.text-stroke {
+  -webkit-text-stroke: 0.5px #ffffff3a; /* For webkit browsers */
+  color: transparent; /* Hide the original text color */
+  -webkit-text-fill-color: transparent;
+}
+
+.font-satoshi{
+  font-family: 'Satoshi', sans-serif;
+}
+.navbar{
+  margin-bottom: -3.125rem !important;
+}
+
+.footerlinks{
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 400;
+  line-height: 1.125rem;
+  font-size: 0.813rem;
+  color: #706f75;
+  text-decoration: underline;                                          
+}
+
+.eclipse-top{
+  background: transparent;
+  background-image: linear-gradient(270deg, #f971ba, #5500be);
+  mix-blend-mode: normal;
+  filter: contrast(210%) blur(40px);
+  z-index: 1;
+  height: 12.5rem;
+  position: relative;
+  top: -10rem;
+  border-radius: 100%;
+}
+.eclipse-bottom{
+  background: transparent;
+  background-image: linear-gradient(270deg, #f971ba, #5500be);
+  mix-blend-mode: normal;
+  filter: contrast(210%) blur(50px);
+  z-index: 100;
+  height: 12.5rem;
+  position: relative;
+  border-radius: 100%;
+}
+
+/* hero section css starts here  */
+
+.gradient-text{
+  background-image: linear-gradient(#fff, #ffb1da 21%, #ff5bb3 48%, #7100ff 77%, #000);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gradient-background{
+  position: relative;
+  background-image: linear-gradient(#f3a7dd, #eb50e9 44%, #450399);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-clip: padding-box;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.gradient-background:hover{
+  background-image: linear-gradient(#450399, #eb50e9 44%, #f3a7dd);
+}
+
+#resume-button:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 15px;
+  right: 0px;
+  border-radius: 50px;
+  z-index: -1;
+  filter: blur(40px);
+}
+ 
+#resume-button::after{
+  background-image: linear-gradient(#f3a7dd, #eb50e9 44%, #450399);
+}
+
+/* hero section css ends here  */
+
+/* skills css  */
+.gradient-border{
+  background: linear-gradient(#09070D, #09070D) padding-box,
+              linear-gradient(to right, darkblue, darkorchid) border-box;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+
+/* timeline css  */
+.timeline-wrapper {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline {
+  height: 250px;
+  width: 1px;
+  background-color: #ffffff0a;
+}
+
+.stub1 {
+  line-height: 300px;
+  font-size: 24px;
+  background-color: #eae4e4;
+}
+
+.stub2 {
+  height: 500px;
+}
+
+.circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 50%;
+  background-image: linear-gradient(#f3a7dd, #eb50e9 44%, #450399) !important;
+  font-weight: 500;
+  font-size:1.5rem;
+}
+
+.circleWrapper {
+  position: relative;
+}
+
+.gradient-box-shadow{
+  box-shadow: 0px 0px 30px rgba(243, 167, 221, 0.01), 0px 0px 30px rgba(235, 80, 233, 0.01), 0px 0px 30px rgba(69, 3, 153, 0.01);
+}
+
+/* testimonial cards css */
+
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 61rem;
+  width: 100%;
+}
+
+#cards:hover > .card::after {
+  opacity: 1;
+}
+
+.card {
+  border-radius: 10px;
+  border:1px solid #ffffff1a;
+  background-color: #100E18;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 30rem;
+  height: 30rem;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card::before,
+.card::after {
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  transition: opacity 500ms;
+  width: 100%;
+}
+
+.card::before {
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y),
+    rgba(101, 24, 124, 0.06),
+    transparent 40%
+  );
+  z-index: 3;
+}
+
+.card::after {
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.09),
+    transparent 40%
+  );
+  z-index: 1;
+}
+
+
+/* -- ↓ ↓ ↓ some responsiveness ↓ ↓ ↓ -- */
+
+@media (max-width: 1000px) {
+  body {
+    align-items: flex-start;
+    overflow: auto;
+  }
+
+  #cards {
+    max-width: 1000px;
+    padding: 10px 0px;
+  }
+
+  .card {
+    flex-shrink: 1;
+    width: calc(50% - 4px);
+  }
+}
+
+@media(min-width:768px){
+  .card{
+    flex-grow: 1;
+  }
+}
+
+@media (max-width: 500px) {
+  .card {
+    flex-grow: 1;
+    margin: 0 1rem;
+    max-height: fit-content;
+  }
+
+
+  .card-image > i {
+    font-size: 3em;
+  }
+
+  .card-info-wrapper {
+    padding: 0px 10px;
+  }
+
+  .card-info > i {
+    font-size: 0.8em;
+  }
+
+  .card-info-title > h3 {
+    font-size: 0.9em;
+  }
+
+  .card-info-title > h4 {
+    font-size: 0.8em;
+    margin-top: 4px;
+  }
+}
+
+@media (max-width: 320px) {
+  .card {
+    width: 10rem;
+  }
+}
