@@ -27,7 +27,7 @@ const Footer = () => {
               Github
             </a>
             <a
-              href="https://www.instagram.com/a.r_mohanty/"
+              href="https://www.instagram.com/anurag.mohanty_/"
               className="footerlinks"
             >
               Instagram
