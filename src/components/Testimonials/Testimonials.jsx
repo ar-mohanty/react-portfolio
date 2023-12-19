@@ -97,7 +97,7 @@ const Testimonials = () => {
   );
 };
 
-const Card = ({rating, comment, company, logo, name, link }) => {
+const Card = ({ rating, comment, company, logo, name, link }) => {
   return (
     <>
       <div className="flex flex-col justify-start items-start p-5 md:p-10 lg:p-8 gap-6">
@@ -125,6 +125,7 @@ const Card = ({rating, comment, company, logo, name, link }) => {
               "font-satoshi text-xs text-[#706f75] font-normal" +
               (link !== "#" ? " underline" : " no-underline")
             }
+            target="_blank"
           >
             {name}
           </Link>
