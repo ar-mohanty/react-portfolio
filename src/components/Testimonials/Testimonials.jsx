@@ -117,7 +117,7 @@ const Card = ({rating, comment, company, logo, name, link }) => {
           height={46}
           className="card-image rounded-3xl"
         />
-        <p className="flex flex-col gap-1 font-satoshi font-bold text-md text-[#dddee5]">
+        <p className="flex flex-col gap-1 font-satoshi font-bold text-md text-[#dddee5] z-50">
           {company}
           <Link
             to={link}
