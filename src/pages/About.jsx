@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import profilePic from "../assets/images/profile-pic.png";
+import profilePic from "../assets/images/profile-pic1.jpg";
 
 const fadeAnimationVariant = {
   initial: {
