@@ -1,11 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-
 const ProjectDetail = () => {
   return (
     <>
-      <section className="overflow-hidden py-11">
+      <div className="about-wrapper lg:m-0 lg:p-0 w-screen lg:w-[calc(100vw-8rem)] overflow-hidden border-x border-b border-[#ffffff0a]">
         <motion.div
           className="eclipse-top w-full"
           initial={{ opacity: 0, y: -80 }}
@@ -205,7 +204,7 @@ const ProjectDetail = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 };
