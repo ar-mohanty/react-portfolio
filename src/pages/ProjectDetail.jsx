@@ -1,9 +1,17 @@
 import React from "react";
+import { motion } from "framer-motion";
+
 
 const ProjectDetail = () => {
   return (
     <>
-      <section className="overflow-hidden bg-white py-11 font-poppins dark:bg-gray-800">
+      <section className="overflow-hidden py-11">
+        <motion.div
+          className="eclipse-top w-full"
+          initial={{ opacity: 0, y: -80 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 3 }}
+        />
         <div className="max-w-6xl px-4 py-4 mx-auto lg:py-8 md:px-6">
           <div className="flex flex-wrap -mx-4">
             <div className="w-full mb-8 md:w-1/2 md:mb-0">
