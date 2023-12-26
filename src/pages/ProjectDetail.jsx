@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Glide from "@glidejs/glide";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Client, Databases } from "appwrite";
 
 const client = new Client();
