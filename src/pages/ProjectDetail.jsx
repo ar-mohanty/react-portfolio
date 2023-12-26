@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Glide from "@glidejs/glide";
 import { useParams } from "react-router-dom";
-import { fetchProject } from "../config/appwriteConfig";
+import { fetchData, fetchProject } from "../config/appwriteConfig";
 
 const ProjectDetail = () => {
   const { id } = useParams();
