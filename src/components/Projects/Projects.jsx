@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {fetchData} from "../../config/appwriteConfig";
+import fetchData from "../../config/appwriteConfig";
 import { motion } from "framer-motion";
 import { Triangle } from "react-loader-spinner";
 import { Link } from "react-router-dom";
