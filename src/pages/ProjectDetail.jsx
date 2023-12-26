@@ -155,10 +155,10 @@ const ProjectDetail = () => {
                   </h2>
                   <p className="inline-block mb-6 text-4xl font-bold text-gray-700 dark:text-gray-400 ">
                     <span className="text-md font-normal text-gray-500 dark:text-gray-400">
-                      Category
+                      Category:
                     </span>
                     <span className="text-base font-normal text-gray-500 dark:text-gray-400">
-                      {fetchedProject.category}
+                      &nbsp;&nbsp;{fetchedProject.category}
                     </span>
                   </p>
                   <p className="max-w-md text-gray-700 dark:text-gray-400">
