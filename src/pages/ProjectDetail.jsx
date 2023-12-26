@@ -6,22 +6,22 @@ import { fetchProject } from "../config/appwriteConfig";
 
 const ProjectDetail = () => {
   const { id } = useParams();
-  const [pid, setPid] = useState(projectId);
+  const [pid, setPid] = useState(id);
   const [fetchedProject, setFetchedProject] = useState([]);
 
-  useEffect(() => {
-    const fetchProjectDataAsync = async () => {
-      try {
-        const response = await fetchProject(id);
-        console.log("consoled single projects", response); // Log the response
-        setFetchedProject(response); // Assuming you have a state variable to store the response
-      } catch (error) {
-        console.error("Error fetching project:", error);
-      }
-    };
-    fetchProjectDataAsync();
-    console.log("fetched project", fetchedProject);
+  const fetchProjectDataAsync = async () => {
+    try {
+      const response = await fetchProject(pid);
+      console.log("consoled single projects", response); // Log the response
+      setFetchedProject(response); // Assuming you have a state variable to store the response
+    } catch (error) {
+      console.error("Error fetching project:", error);
+    }
+  };
+  fetchProjectDataAsync();
+  console.log("fetched project", fetchedProject);
 
+  useEffect(() => {
     const slider = new Glide(".glide-01", {
       type: "slider",
       focusAt: "center",
@@ -38,7 +38,7 @@ const ProjectDetail = () => {
     return () => {
       slider.destroy();
     };
-  }, [id,setFetchedProject]);
+  }, []);
 
   return (
     <>
