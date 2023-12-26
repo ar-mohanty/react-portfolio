@@ -8,21 +8,8 @@ client
   .setEndpoint(import.meta.env.VITE_APPWRITE_ENDPOINT)
   .setProject(import.meta.env.VITE_APPWRITE_PROJECT_ID);
 
-// const promise = databases.listDocuments(
-//   import.meta.env.VITE_APPWRITE_PROJECT_DATABASE_ID,
-//   import.meta.env.VITE_APPWRITE_PROJECT_COLLECTION_ID
-// );
 
-// promise.then(
-//   function (response) {
-//     console.log(response); // Success
-//   },
-//   function (error) {
-//     console.log(error); // Failure
-//   }
-// );
-
-export async function fetchData() {
+async function fetchData() {
   try {
     const response = await databases.listDocuments(
       import.meta.env.VITE_APPWRITE_PROJECT_DATABASE_ID,
@@ -38,7 +25,7 @@ export async function fetchData() {
   }
 }
 
-export async function fetchProject({ pid }) {
+async function fetchProject({ pid }) {
   try {
     const response = await databases.getDocument(
       import.meta.env.VITE_APPWRITE_PROJECT_DATABASE_ID,
@@ -55,3 +42,4 @@ export async function fetchProject({ pid }) {
   }
 }
 
+export {fetchData, fetchProject}
