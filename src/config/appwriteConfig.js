@@ -55,4 +55,4 @@ async function fetchProject({ pid }) {
   }
 }
 
-export default { fetchData, fetchProject };
+export { fetchData, fetchProject };
