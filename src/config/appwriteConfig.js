@@ -38,4 +38,21 @@ async function fetchData() {
   }
 }
 
-export default fetchData;
+async function fetchProject(id) {
+  try {
+    const response = await databases.getDocument(
+      import.meta.env.VITE_APPWRITE_PROJECT_DATABASE_ID,
+      import.meta.env.VITE_APPWRITE_PROJECT_COLLECTION_ID,
+      id
+    );
+    const documents = response.documents;
+
+    return documents;
+    // console.log(documents);
+    // Update your frontend with the fetched data here
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+}
+
+export { fetchData, fetchProject };

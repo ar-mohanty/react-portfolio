@@ -2,16 +2,24 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Glide from "@glidejs/glide";
 import { useParams } from "react-router-dom";
+import { fetchProject } from "../config/appwriteConfig";
 
 const ProjectDetail = () => {
   const { projectId } = useParams();
   const [id, setId] = useState(projectId);
-  console.log(projectId);
-
-  
+  const [fetchedProject, setFetchedProject] = useState([]);
 
   useEffect(() => {
-    console.log(id);
+    const fetchDataAsync = async () => {
+      try {
+        const response = await fetchProject(id);
+        console.log("consoled projects", response); // Log the response
+        setFetchedProject(response); // Assuming you have a state variable to store the response
+      } catch (error) {
+        console.error("Error fetching project:", error);
+      }
+    };
+
     const slider = new Glide(".glide-01", {
       type: "slider",
       focusAt: "center",
@@ -28,7 +36,9 @@ const ProjectDetail = () => {
     return () => {
       slider.destroy();
     };
-  }, [id]);
+  }, [id, setFetchedProject]);
+
+  console.log(fetchProject);
 
   return (
     <>
