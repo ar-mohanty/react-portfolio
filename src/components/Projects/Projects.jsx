@@ -82,15 +82,14 @@ const Projects = () => {
             ) : (
               fetchedProject.map((item, index) => {
                 return (
-                  <Link to="#">
-                    <ProjectCard
-                      key={index}
-                      index={index}
-                      img={item.image_url}
-                      title={item.title}
-                      desc={item.Description}
-                    />
-                  </Link>
+                  <ProjectCard
+                    key={index}
+                    index={index}
+                    img={item.image_url}
+                    title={item.title}
+                    desc={item.Description}
+                    pagelink={item.title}
+                  />
                 );
               })
             )}
@@ -107,29 +106,33 @@ const Projects = () => {
   );
 };
 
-const ProjectCard = ({ index, img, title, desc }) => {
+const ProjectCard = ({ index, img, title, desc, pagelink }) => {
   return (
     <>
-      <motion.div
-        class="w-full lg:w-[22%] rounded-xl overflow-hidden hover:shadow-custom bg-[#ffffff] border border-zinc-700 hover:shadow-fuchsia-800 hover:cursor-pointer min-h-[19rem] duration-700"
-        variants={fadeAnimationVariant}
-        initial="initial"
-        custom={index}
-        whileInView="animate"
-        viewport={{ once: true }}
-      >
-        <img
-          className="w-full m-0 h-48 object-cover"
-          src={img}
-          alt="Sunset in the mountains"
-        />
-        <div className="px-6 py-4">
-          <div className="font-satoshi font-bold text-md text-zinc-800 mb-1">
-            {title}
+      <Link to={pagelink}>
+        <motion.div
+          class="w-full lg:w-[22%] rounded-xl overflow-hidden hover:shadow-custom bg-[#ffffff] border border-zinc-700 hover:shadow-fuchsia-800 hover:cursor-pointer min-h-[19rem] duration-700"
+          variants={fadeAnimationVariant}
+          initial="initial"
+          custom={index}
+          whileInView="animate"
+          viewport={{ once: true }}
+        >
+          <img
+            className="w-full m-0 h-48 object-cover"
+            src={img}
+            alt="Sunset in the mountains"
+          />
+          <div className="px-6 py-4">
+            <div className="font-satoshi font-bold text-md text-zinc-800 mb-1">
+              {title}
+            </div>
+            <p className="max-w-xs text-xs text-zinc-600 line-clamp-2">
+              {desc}
+            </p>
           </div>
-          <p className="max-w-xs text-xs text-zinc-600 line-clamp-2">{desc}</p>
-        </div>
-      </motion.div>
+        </motion.div>
+      </Link>
     </>
   );
 };
