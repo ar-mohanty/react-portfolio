@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Glide from "@glidejs/glide";
 import { useParams } from "react-router-dom";
-import { fetchData, fetchProject } from "../config/appwriteConfig";
+// import { fetchData, fetchProject } from "../config/appwriteConfig";
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -12,7 +12,11 @@ const ProjectDetail = () => {
   useEffect(() => {
     const fetchProjectDataAsync = async () => {
       try {
-        const response = await fetchProject(pid);
+        const response = await databases.getDocument(
+          import.meta.env.VITE_APPWRITE_PROJECT_DATABASE_ID,
+          import.meta.env.VITE_APPWRITE_PROJECT_COLLECTION_ID,
+          pid
+        );
         console.log("consoled single projects", response);
         setFetchedProject(response);
       } catch (error) {
