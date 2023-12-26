@@ -81,7 +81,7 @@ const Projects = () => {
               </div>
             ) : (
               fetchedProject.map((item, index) => {
-                projectlink = "/product-detail/" + item.$id;
+                const projectlink = "/product-detail/" + item.$id;
                 console.log(projectlink);
                 return (
                   <ProjectCard
