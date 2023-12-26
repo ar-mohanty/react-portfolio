@@ -74,25 +74,25 @@ const ProjectDetail = () => {
                     <li>
                       <img
                         src={fetchedProject.mobile_image}
-                        className="w-full max-w-full max-h-full m-auto"
+                        className="w-[1000px] h-[668px] m-auto"
                       />
                     </li>
                     <li>
                       <img
                         src={fetchedProject.laptop_image}
-                        className="w-full max-w-full max-h-full m-auto"
+                        className="w-[1000px] h-[668px] m-auto"
                       />
                     </li>
                     <li>
                       <img
                         src={fetchedProject.tab_image}
-                        className="w-full max-w-full max-h-full m-auto"
+                        className="w-[1000px] h-[668px] m-auto"
                       />
                     </li>
                     <li>
                       <img
                         src={fetchedProject.desktop_image}
-                        className="w-full max-w-full max-h-full m-auto"
+                        className="w-[1000px] h-[668px] m-auto"
                       />
                     </li>
                   </ul>
