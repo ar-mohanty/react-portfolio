@@ -162,7 +162,7 @@ const ProjectDetail = () => {
                     </span>
                   </p>
                   <p className="max-w-md text-gray-700 dark:text-gray-400">
-                    {fetchedProject.Description}
+                    Tags: {fetchedProject.Description}
                   </p>
                 </div>
                 <div className="mb-8">
