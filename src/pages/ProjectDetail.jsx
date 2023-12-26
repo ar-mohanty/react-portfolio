@@ -19,6 +19,7 @@ const ProjectDetail = () => {
         console.error("Error fetching project:", error);
       }
     };
+    console.log("fetched project", fetchedProject);
 
     const slider = new Glide(".glide-01", {
       type: "slider",
@@ -36,9 +37,7 @@ const ProjectDetail = () => {
     return () => {
       slider.destroy();
     };
-  }, [id, setFetchedProject]);
-
-  console.log("fetched project", fetchedProject);
+  }, [id]);
 
   return (
     <>
