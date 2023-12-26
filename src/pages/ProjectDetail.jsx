@@ -54,6 +54,7 @@ const ProjectDetail = () => {
     };
   }, [fetchedProject]);
 
+  console.log(fetchedProject.mobile_image);
   return (
     <>
       <div className="about-wrapper lg:m-0 lg:p-0 w-screen lg:w-[calc(100vw-8rem)] overflow-hidden border-x border-b border-[#ffffff0a]">
