@@ -25,15 +25,8 @@ const ProjectDetail = () => {
           import.meta.env.VITE_APPWRITE_PROJECT_COLLECTION_ID,
           pid
         );
-        promise.then(
-          function (response) {
-            console.log(response); // Success
-            setFetchedProject(response);
-          },
-          function (error) {
-            console.log(error); // Failure
-          }
-        );
+        console.log(response); // Success
+        setFetchedProject(response);
       } catch (error) {
         console.error("Error fetching project:", error);
       }
