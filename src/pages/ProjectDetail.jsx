@@ -72,25 +72,25 @@ const ProjectDetail = () => {
                   <ul className="whitespace-no-wrap flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform] relative flex w-full overflow-hidden p-0">
                     <li>
                       <img
-                        src={fetchedProject.mobile_image}
+                        src="#"
                         className="w-full max-w-full max-h-full m-auto"
                       />
                     </li>
                     <li>
                       <img
-                        src={fetchedProject.laptop_image}
+                        src="#"
                         className="w-full max-w-full max-h-full m-auto"
                       />
                     </li>
                     <li>
                       <img
-                        src={fetchedProject.tab_image}
+                        src="#"
                         className="w-full max-w-full max-h-full m-auto"
                       />
                     </li>
                     <li>
                       <img
-                        src={fetchedProject.desktop_image}
+                        src="#"
                         className="w-full max-w-full max-h-full m-auto"
                       />
                     </li>
