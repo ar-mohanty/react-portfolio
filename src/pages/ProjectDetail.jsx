@@ -2,7 +2,11 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Glide from "@glidejs/glide";
 import { useParams } from "react-router-dom";
-// import { fetchData, fetchProject } from "../config/appwriteConfig";
+import { Client, Databases } from "appwrite";
+
+const client = new Client();
+
+const databases = new Databases(client);
 
 const ProjectDetail = () => {
   const { id } = useParams();
