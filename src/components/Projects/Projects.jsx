@@ -111,7 +111,7 @@ const Projects = () => {
 const ProjectCard = ({ index, img, title, desc, pagelink }) => {
   return (
     <>
-      <Link
+      <motion.Link
         to={pagelink}
         className="w-full lg:w-[22%] rounded-xl overflow-hidden hover:shadow-custom bg-transparent border border-zinc-700 hover:shadow-fuchsia-800 hover:cursor-pointer min-h-[19rem] duration-700"
         variants={fadeAnimationVariant}
@@ -135,7 +135,7 @@ const ProjectCard = ({ index, img, title, desc, pagelink }) => {
             </p>
           </div>
         </motion.div>
-      </Link>
+      </motion.Link>
     </>
   );
 };
