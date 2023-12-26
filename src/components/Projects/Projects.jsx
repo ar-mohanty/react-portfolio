@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import fetchData from "../../config/appwriteConfig";
 import { motion } from "framer-motion";
 import { Triangle } from "react-loader-spinner";
+import { Link } from "react-router-dom";
 
 const fadeAnimationVariant = {
   initial: {
@@ -26,7 +27,7 @@ const Projects = () => {
     const fetchDataAsync = async () => {
       try {
         const response = await fetchData();
-        // console.log("consoled projects", response); // Log the response
+        console.log("consoled projects", response); // Log the response
         setFetchedProject(response); // Assuming you have a state variable to store the response
         setLoading(false);
       } catch (error) {
@@ -66,6 +67,7 @@ const Projects = () => {
           >
             checkout some latest work
           </motion.span>
+          <Link></Link>
           <div className="projects-cards p-5 lg:p-0 flex flex-wrap gap-16 lg:gap-5 items-center justify-center">
             {loading ? (
               <div className="flex flex-col items-center justify-center">
@@ -81,13 +83,15 @@ const Projects = () => {
             ) : (
               fetchedProject.map((item, index) => {
                 return (
-                  <ProjectCard
-                    key={index}
-                    index={index}
-                    img={item.image_url}
-                    title={item.title}
-                    desc={item.Description}
-                  />
+                  <Link to={item.documentid}>
+                    <ProjectCard
+                      key={index}
+                      index={index}
+                      img={item.image_url}
+                      title={item.title}
+                      desc={item.Description}
+                    />
+                  </Link>
                 );
               })
             )}
