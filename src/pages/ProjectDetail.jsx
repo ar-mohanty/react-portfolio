@@ -38,7 +38,7 @@ const ProjectDetail = () => {
     };
   }, [id, setFetchedProject]);
 
-  console.log("fetched project", fetchProject);
+  console.log("fetched project", fetchedProject);
 
   return (
     <>
