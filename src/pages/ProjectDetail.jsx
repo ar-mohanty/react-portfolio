@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 const ProjectDetail = () => {
   const { projectId } = useParams();
   const [id, setId] = useState(projectId);
+  console.log(projectId);
 
   
 
