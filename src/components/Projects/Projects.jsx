@@ -118,7 +118,7 @@ const ProjectCard = ({ index, img, title, desc, pagelink }) => {
         whileInView="animate"
         viewport={{ once: true }}
       >
-        <motion.div className="h-full rounded-xl overflow-hidden hover:shadow-custom bg-[#ffffff] hover:shadow-fuchsia-800 hover:cursor-pointer duration-700">
+        <motion.div className="min-h-[19rem] rounded-xl overflow-hidden hover:shadow-custom bg-[#ffffff] hover:shadow-fuchsia-800 hover:cursor-pointer duration-700">
           <img
             className="w-full m-0 h-48 object-cover"
             src={img}
