@@ -111,31 +111,34 @@ const Projects = () => {
 const ProjectCard = ({ index, img, title, desc, pagelink }) => {
   return (
     <>
-      <motion.Link
-        to={pagelink}
-        className="w-full lg:w-[22%] rounded-xl overflow-hidden hover:shadow-custom bg-transparent border border-zinc-700 hover:shadow-fuchsia-800 hover:cursor-pointer min-h-[19rem] duration-700"
+      <motion.div
         variants={fadeAnimationVariant}
         initial="initial"
         custom={index}
         whileInView="animate"
         viewport={{ once: true }}
       >
-        <motion.div className="min-h-[19rem] rounded-xl overflow-hidden hover:shadow-custom bg-[#ffffff] hover:shadow-fuchsia-800 hover:cursor-pointer duration-700">
-          <img
-            className="w-full m-0 h-48 object-cover"
-            src={img}
-            alt="Sunset in the mountains"
-          />
-          <div className="px-6 py-4">
-            <div className="font-satoshi font-bold text-md text-zinc-800 mb-1">
-              {title}
+        <Link
+          to={pagelink}
+          className="w-full lg:w-[22%] rounded-xl overflow-hidden hover:shadow-custom bg-transparent border border-zinc-700 hover:shadow-fuchsia-800 hover:cursor-pointer min-h-[19rem] duration-700"
+        >
+          <motion.div className="min-h-[19rem] rounded-xl overflow-hidden hover:shadow-custom bg-[#ffffff] hover:shadow-fuchsia-800 hover:cursor-pointer duration-700">
+            <img
+              className="w-full m-0 h-48 object-cover"
+              src={img}
+              alt="Sunset in the mountains"
+            />
+            <div className="px-6 py-4">
+              <div className="font-satoshi font-bold text-md text-zinc-800 mb-1">
+                {title}
+              </div>
+              <p className="max-w-xs text-xs text-zinc-600 line-clamp-2">
+                {desc}
+              </p>
             </div>
-            <p className="max-w-xs text-xs text-zinc-600 line-clamp-2">
-              {desc}
-            </p>
-          </div>
-        </motion.div>
-      </motion.Link>
+          </motion.div>
+        </Link>
+      </motion.div>
     </>
   );
 };
