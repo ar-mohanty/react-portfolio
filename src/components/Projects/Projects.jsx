@@ -67,7 +67,6 @@ const Projects = () => {
           >
             checkout some latest work
           </motion.span>
-          <Link></Link>
           <div className="projects-cards p-5 lg:p-0 flex flex-wrap gap-16 lg:gap-5 items-center justify-center">
             {loading ? (
               <div className="flex flex-col items-center justify-center">
@@ -83,7 +82,7 @@ const Projects = () => {
             ) : (
               fetchedProject.map((item, index) => {
                 return (
-                  <Link to={item.documentid}>
+                  <Link to="#">
                     <ProjectCard
                       key={index}
                       index={index}
