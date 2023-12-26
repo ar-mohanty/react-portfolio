@@ -5,8 +5,8 @@ import { useParams } from "react-router-dom";
 import { fetchProject } from "../config/appwriteConfig";
 
 const ProjectDetail = () => {
-  const { projectId } = useParams();
-  const [id, setId] = useState(projectId);
+  const { id } = useParams();
+  const [pid, setPid] = useState(projectId);
   const [fetchedProject, setFetchedProject] = useState([]);
 
   useEffect(() => {
@@ -38,7 +38,7 @@ const ProjectDetail = () => {
     return () => {
       slider.destroy();
     };
-  }, [id]);
+  }, [id,setFetchedProject]);
 
   return (
     <>
