@@ -38,7 +38,7 @@ async function fetchData() {
   }
 }
 
-async function fetchProject(id) {
+async function fetchProject({ id }) {
   try {
     const response = await databases.getDocument(
       import.meta.env.VITE_APPWRITE_PROJECT_DATABASE_ID,
