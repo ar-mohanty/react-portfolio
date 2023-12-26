@@ -26,6 +26,7 @@ async function fetchData() {
 }
 
 async function fetchProject(pid) {
+  console.log("this is project id", pid);
   try {
     const response = await databases.getDocument(
       import.meta.env.VITE_APPWRITE_PROJECT_DATABASE_ID,
