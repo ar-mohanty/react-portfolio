@@ -4,6 +4,7 @@ import Glide from "@glidejs/glide";
 import { Link, useParams } from "react-router-dom";
 import { Client, Databases } from "appwrite";
 
+
 const client = new Client();
 
 const databases = new Databases(client);
@@ -153,10 +154,10 @@ const ProjectDetail = () => {
                     {fetchedProject.title}
                   </h2>
                   <p className="inline-block mb-6 text-4xl font-bold text-gray-700 dark:text-gray-400 ">
-                    <span className="text-base font-normal text-gray-500 line-through dark:text-gray-400">
+                    <span className="text-md font-normal text-gray-500 dark:text-gray-400">
                       Category
                     </span>
-                    <span className="text-base font-normal text-gray-500 line-through dark:text-gray-400">
+                    <span className="text-base font-normal text-gray-500 dark:text-gray-400">
                       {fetchedProject.category}
                     </span>
                   </p>
