@@ -4,7 +4,7 @@ import Glide from "@glidejs/glide";
 import { useParams } from "react-router-dom";
 
 const ProjectDetail = () => {
-  const { projectId } = useParams();
+  const { projectId } = useParams(id);
   const [id, setId] = useState(projectId);
 
   console.log(id);
