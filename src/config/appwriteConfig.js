@@ -38,12 +38,12 @@ async function fetchData() {
   }
 }
 
-async function fetchProject({ id }) {
+async function fetchProject({ pid }) {
   try {
     const response = await databases.getDocument(
       import.meta.env.VITE_APPWRITE_PROJECT_DATABASE_ID,
       import.meta.env.VITE_APPWRITE_PROJECT_COLLECTION_ID,
-      id
+      pid
     );
     const documents = response.documents;
 

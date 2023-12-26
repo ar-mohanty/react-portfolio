@@ -9,17 +9,19 @@ const ProjectDetail = () => {
   const [pid, setPid] = useState(id);
   const [fetchedProject, setFetchedProject] = useState([]);
 
-  const fetchProjectDataAsync = async () => {
-    try {
-      const response = await fetchProject(pid);
-      console.log("consoled single projects", response); // Log the response
-      setFetchedProject(response); // Assuming you have a state variable to store the response
-    } catch (error) {
-      console.error("Error fetching project:", error);
-    }
-  };
-  fetchProjectDataAsync();
-  console.log("fetched project", fetchedProject);
+  useEffect(() => {
+    const fetchProjectDataAsync = async () => {
+      try {
+        const response = await fetchProject(pid);
+        console.log("consoled single projects", response);
+        setFetchedProject(response);
+      } catch (error) {
+        console.error("Error fetching project:", error);
+      }
+    };
+
+    fetchProjectDataAsync();
+  }, [pid]);
 
   useEffect(() => {
     const slider = new Glide(".glide-01", {
@@ -38,7 +40,9 @@ const ProjectDetail = () => {
     return () => {
       slider.destroy();
     };
-  }, []);
+  }, [fetchedProject]);
+
+  console.log("fetched project", fetchedProject);
 
   return (
     <>
