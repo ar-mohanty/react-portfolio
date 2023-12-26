@@ -154,7 +154,7 @@ const ProjectDetail = () => {
                     {fetchedProject.title}
                   </h2>
                   <p className="inline-block mb-6 text-4xl font-bold text-gray-700 dark:text-gray-400 ">
-                    <span className="text-xs font-normal text-gray-500 dark:text-gray-400">
+                    <span className="text-sm font-normal text-gray-500 dark:text-gray-400">
                       Category:
                     </span>
                     <span className="text-base font-normal text-gray-500 dark:text-gray-400">
