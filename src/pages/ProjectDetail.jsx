@@ -54,10 +54,6 @@ const ProjectDetail = () => {
     };
   }, [fetchedProject]);
 
-  console.log(fetchedProject.mobile_image);
-  console.log(fetchedProject.laptop_image);
-  console.log(fetchedProject.tab_image);
-  console.log(fetchedProject.desktop_image);
   return (
     <>
       <div className="about-wrapper lg:m-0 lg:p-0 w-screen lg:w-[calc(100vw-8rem)] overflow-hidden border-x border-b border-[#ffffff0a]">
@@ -154,100 +150,27 @@ const ProjectDetail = () => {
               <div className="lg:pl-20">
                 <div className="mb-8 ">
                   <h2 className="max-w-xl mb-6 text-2xl font-bold dark:text-gray-400 md:text-4xl">
-                    Macbook Pro M130c90
+                    {fetchedProject.title}
                   </h2>
                   <p className="inline-block mb-6 text-4xl font-bold text-gray-700 dark:text-gray-400 ">
-                    <span>$1500.99</span>
                     <span className="text-base font-normal text-gray-500 line-through dark:text-gray-400">
-                      $1800.99
+                      Category
+                    </span>
+                    <span className="text-base font-normal text-gray-500 line-through dark:text-gray-400">
+                      {fetchedProject.category}
                     </span>
                   </p>
                   <p className="max-w-md text-gray-700 dark:text-gray-400">
-                    Lorem ispum dor amet Lorem ispum dor amet Lorem ispum dor
-                    amet Lorem ispum dor amet Lorem ispum dor amet Lorem ispum
-                    dor amet Lorem ispum dor amet Lorem ispum dor amet
+                    {fetchedProject.Description}
                   </p>
                 </div>
                 <div className="mb-8">
-                  <h2 className="w-16 pb-1 mb-4 text-2xl font-bold border-b border-blue-300 dark:text-gray-400 dark:border-gray-600">
-                    Colors
-                  </h2>
-                  <div className="flex flex-wrap -mx-2 -mb-2">
-                    <button className="p-1 mb-2 mr-3 ">
-                      <div className="w-6 h-6 rounded-full bg-stone-400" />
-                    </button>
-                    <button className="p-1 mb-2 mr-3 ">
-                      <div className="w-6 h-6 bg-gray-700 rounded-full" />
-                    </button>
-                    <button className="p-1 mb-2 ">
-                      <div className="w-6 h-6 bg-blue-200 rounded-full" />
-                    </button>
-                  </div>
-                </div>
-                <div className="mb-8 ">
-                  <h2 className="w-16 pb-1 mb-4 text-xl font-semibold border-b border-blue-300 dark:border-gray-600 dark:text-gray-400">
-                    RAM
-                  </h2>
-                  <div>
-                    <div className="flex flex-wrap -mb-2">
-                      <button className="px-4 py-2 mb-2 mr-4 font-semibold border rounded-md hover:border-blue-400 dark:border-gray-400 hover:text-blue-600 dark:hover:border-gray-300 dark:text-gray-400">
-                        8 GB
-                      </button>
-                      <button className="px-4 py-2 mb-2 mr-4 font-semibold border rounded-md hover:border-blue-400 hover:text-blue-600 dark:border-gray-400 dark:hover:border-gray-300 dark:text-gray-400">
-                        16 GB
-                      </button>
-                      <button className="px-4 py-2 mb-2 font-semibold border rounded-md hover:border-blue-400 hover:text-blue-600 dark:border-gray-400 dark:hover:border-gray-300 dark:text-gray-400">
-                        1 TB
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div className="mb-8">
-                  <h2 className="w-16 pb-1 mb-6 text-xl font-semibold border-b border-blue-300 dark:border-gray-600 dark:text-gray-400">
-                    Storage
-                  </h2>
-                  <div>
-                    <div className="flex flex-wrap -mx-2 -mb-2">
-                      <button className="px-4 py-2 mb-2 mr-4 font-semibold border rounded-md hover:border-blue-400 dark:border-gray-400 hover:text-blue-600 dark:hover:border-gray-300 dark:text-gray-400">
-                        256 GB
-                      </button>
-                      <button className="px-4 py-2 mb-2 mr-4 font-semibold border rounded-md hover:border-blue-400 hover:text-blue-600 dark:border-gray-400 dark:hover:border-gray-300 dark:text-gray-400">
-                        112 GB
-                      </button>
-                      <button className="px-4 py-2 mb-2 mr-2 font-semibold border rounded-md hover:border-blue-400 hover:text-blue-600 dark:border-gray-400 dark:hover:border-gray-300 dark:text-gray-400">
-                        1 TB
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-32 mb-8 ">
-                  <label
-                    htmlFor
-                    className="w-full pb-1 text-xl font-semibold text-gray-700 border-b border-blue-300 dark:border-gray-600 dark:text-gray-400"
+                  <Link
+                    className="w-16 pb-1 mb-4 text-2xl font-bold border-b border-blue-300 dark:text-gray-400 dark:border-gray-600"
+                    to={fetchedProject.projectlink}
                   >
-                    Quantity
-                  </label>
-                  <div className="relative flex flex-row w-full h-10 mt-6 bg-transparent rounded-lg">
-                    <button className="w-20 h-full text-gray-600 bg-gray-300 rounded-l outline-none cursor-pointer dark:hover:bg-gray-700 dark:text-gray-400 hover:text-gray-700 dark:bg-gray-900 hover:bg-gray-400">
-                      <span className="m-auto text-2xl font-thin">-</span>
-                    </button>
-                    <input
-                      type="number"
-                      className="flex items-center w-full font-semibold text-center text-gray-700 placeholder-gray-700 bg-gray-300 outline-none dark:text-gray-400 dark:placeholder-gray-400 dark:bg-gray-900 focus:outline-none text-md hover:text-black"
-                      placeholder={1}
-                    />
-                    <button className="w-20 h-full text-gray-600 bg-gray-300 rounded-r outline-none cursor-pointer dark:hover:bg-gray-700 dark:text-gray-400 dark:bg-gray-900 hover:text-gray-700 hover:bg-gray-400">
-                      <span className="m-auto text-2xl font-thin">+</span>
-                    </button>
-                  </div>
-                </div>
-                <div className="flex flex-wrap items-center gap-4">
-                  <button className="w-full p-4 bg-blue-500 rounded-md lg:w-2/5 dark:text-gray-200 text-gray-50 hover:bg-blue-600 dark:bg-blue-500 dark:hover:bg-blue-700">
-                    Add to cart
-                  </button>
-                  <button className="flex items-center justify-center w-full p-4 text-blue-500 border border-blue-500 rounded-md lg:w-2/5 dark:text-gray-200 dark:border-blue-600 hover:bg-blue-600 hover:border-blue-600 hover:text-gray-100 dark:bg-blue-500 dark:hover:bg-blue-700 dark:hover:border-blue-700 dark:hover:text-gray-300">
-                    Buy Now
-                  </button>
+                    Live Link 🔗
+                  </Link>
                 </div>
               </div>
             </div>
