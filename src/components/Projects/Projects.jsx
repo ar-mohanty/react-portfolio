@@ -65,7 +65,7 @@ const Projects = () => {
             whileInView="animate"
             viewport={{ once: true }}
           >
-            checkout some latest work
+            checkout some latest works
           </motion.span>
           <div className="projects-cards p-5 lg:p-0 flex flex-wrap gap-16 lg:gap-5 items-center justify-center">
             {loading ? (
