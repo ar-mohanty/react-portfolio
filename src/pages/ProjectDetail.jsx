@@ -20,7 +20,7 @@ const ProjectDetail = () => {
   useEffect(() => {
     const fetchProjectDataAsync = async () => {
       try {
-        const promise = await databases.getDocument(
+        const response = await databases.getDocument(
           import.meta.env.VITE_APPWRITE_PROJECT_DATABASE_ID,
           import.meta.env.VITE_APPWRITE_PROJECT_COLLECTION_ID,
           pid
