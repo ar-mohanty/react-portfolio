@@ -22,7 +22,7 @@ client
 //   }
 // );
 
-async function fetchData() {
+export async function fetchData() {
   try {
     const response = await databases.listDocuments(
       import.meta.env.VITE_APPWRITE_PROJECT_DATABASE_ID,
@@ -38,7 +38,7 @@ async function fetchData() {
   }
 }
 
-async function fetchProject({ pid }) {
+export async function fetchProject({ pid }) {
   try {
     const response = await databases.getDocument(
       import.meta.env.VITE_APPWRITE_PROJECT_DATABASE_ID,
@@ -55,4 +55,3 @@ async function fetchProject({ pid }) {
   }
 }
 
-export { fetchData, fetchProject };
