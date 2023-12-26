@@ -10,7 +10,7 @@ const ProjectDetail = () => {
   const [fetchedProject, setFetchedProject] = useState([]);
 
   useEffect(() => {
-    const fetchDataAsync = async () => {
+    const fetchProjectDataAsync = async () => {
       try {
         const response = await fetchProject(id);
         console.log("consoled projects", response); // Log the response
@@ -19,6 +19,7 @@ const ProjectDetail = () => {
         console.error("Error fetching project:", error);
       }
     };
+    fetchProjectDataAsync();
     console.log("fetched project", fetchedProject);
 
     const slider = new Glide(".glide-01", {
