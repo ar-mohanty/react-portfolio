@@ -111,16 +111,14 @@ const ProjectCard = ({ index, img, title, desc, pagelink }) => {
     <>
       <Link
         to={pagelink}
-        className="w-full lg:w-[22%] rounded-xl overflow-hidden hover:shadow-custom bg-[#ffffff] border border-zinc-700 hover:shadow-fuchsia-800 hover:cursor-pointer min-h-[19rem] duration-700"
+        className="w-full lg:w-[22%] rounded-xl overflow-hidden hover:shadow-custom bg-transparent border border-zinc-700 hover:shadow-fuchsia-800 hover:cursor-pointer min-h-[19rem] duration-700"
+        variants={fadeAnimationVariant}
+        initial="initial"
+        custom={index}
+        whileInView="animate"
+        viewport={{ once: true }}
       >
-        <motion.div
-          className="rounded-xl overflow-hidden hover:shadow-custom bg-[#ffffff] border border-zinc-700 hover:shadow-fuchsia-800 hover:cursor-pointe duration-700"
-          variants={fadeAnimationVariant}
-          initial="initial"
-          custom={index}
-          whileInView="animate"
-          viewport={{ once: true }}
-        >
+        <motion.div className="rounded-xl overflow-hidden hover:shadow-custom bg-[#ffffff] hover:shadow-fuchsia-800 hover:cursor-pointer duration-700">
           <img
             className="w-full m-0 h-48 object-cover"
             src={img}
