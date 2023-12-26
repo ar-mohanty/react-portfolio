@@ -74,25 +74,25 @@ const ProjectDetail = () => {
                     <li>
                       <img
                         src={fetchedProject.mobile_image}
-                        className="w-auto h-56 object-cover m-auto"
+                        className="w-auto h-[34rem] object-cover m-auto"
                       />
                     </li>
                     <li>
                       <img
                         src={fetchedProject.laptop_image}
-                        className="w-auto h-56 object-cover m-auto"
+                        className="w-auto h-[34rem] object-cover m-auto"
                       />
                     </li>
                     <li>
                       <img
                         src={fetchedProject.tab_image}
-                        className="w-auto h-56 object-cover m-auto"
+                        className="w-auto h-[34rem] object-cover m-auto"
                       />
                     </li>
                     <li>
                       <img
                         src={fetchedProject.desktop_image}
-                        className="w-auto h-56 object-cover m-auto"
+                        className="w-auto h-[34rem] object-cover m-auto"
                       />
                     </li>
                   </ul>
