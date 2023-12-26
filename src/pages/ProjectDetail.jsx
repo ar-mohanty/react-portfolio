@@ -16,13 +16,20 @@ const ProjectDetail = () => {
   useEffect(() => {
     const fetchProjectDataAsync = async () => {
       try {
-        const response = await databases.getDocument(
+        const promise = await databases.getDocument(
           import.meta.env.VITE_APPWRITE_PROJECT_DATABASE_ID,
           import.meta.env.VITE_APPWRITE_PROJECT_COLLECTION_ID,
           pid
         );
-        console.log("consoled single projects", response);
-        setFetchedProject(response);
+        promise.then(
+          function (response) {
+            console.log(response); // Success
+            setFetchedProject(response);
+          },
+          function (error) {
+            console.log(error); // Failure
+          }
+        );
       } catch (error) {
         console.error("Error fetching project:", error);
       }
