@@ -27,7 +27,7 @@ const ProjectDetail = () => {
     return () => {
       slider.destroy();
     };
-  }, []);
+  }, [id]);
 
   return (
     <>
