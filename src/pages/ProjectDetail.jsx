@@ -12,6 +12,7 @@ const ProjectDetail = () => {
   useEffect(() => {
     const fetchProjectDataAsync = async () => {
       try {
+        console.log(pid);
         const response = await fetchProject(pid);
         console.log("consoled single projects", response);
         setFetchedProject(response);
