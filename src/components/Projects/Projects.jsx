@@ -114,7 +114,7 @@ const ProjectCard = ({ index, img, title, desc, pagelink }) => {
         className="w-full lg:w-[22%] rounded-xl overflow-hidden hover:shadow-custom bg-[#ffffff] border border-zinc-700 hover:shadow-fuchsia-800 hover:cursor-pointer min-h-[19rem] duration-700"
       >
         <motion.div
-          className="w-full lg:w-[22%] rounded-xl overflow-hidden hover:shadow-custom bg-[#ffffff] border border-zinc-700 hover:shadow-fuchsia-800 hover:cursor-pointer min-h-[19rem] duration-700"
+          className="rounded-xl overflow-hidden hover:shadow-custom bg-[#ffffff] border border-zinc-700 hover:shadow-fuchsia-800 hover:cursor-pointe duration-700"
           variants={fadeAnimationVariant}
           initial="initial"
           custom={index}
