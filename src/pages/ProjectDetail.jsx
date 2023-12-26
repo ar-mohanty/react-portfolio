@@ -13,7 +13,7 @@ const ProjectDetail = () => {
     const fetchProjectDataAsync = async () => {
       try {
         const response = await fetchProject(id);
-        console.log("consoled projects", response); // Log the response
+        console.log("consoled single projects", response); // Log the response
         setFetchedProject(response); // Assuming you have a state variable to store the response
       } catch (error) {
         console.error("Error fetching project:", error);
