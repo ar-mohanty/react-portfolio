@@ -1,8 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Glide from "@glidejs/glide";
+import { useParams } from "react-router-dom";
 
 const ProjectDetail = () => {
+  const { projectId } = useParams();
+  const [id, setId] = useState(projectId);
+
+  console.log(id);
+
   useEffect(() => {
     const slider = new Glide(".glide-01", {
       type: "slider",
