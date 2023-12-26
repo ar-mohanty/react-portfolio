@@ -37,12 +37,12 @@ const ProjectDetail = () => {
         },
       },
     }).mount();
+    console.log("fetched project", fetchedProject);
+
     return () => {
       slider.destroy();
     };
   }, [fetchedProject]);
-
-  console.log("fetched project", fetchedProject);
 
   return (
     <>
