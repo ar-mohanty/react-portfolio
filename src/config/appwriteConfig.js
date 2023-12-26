@@ -48,7 +48,7 @@ async function fetchProject({ pid }) {
     const documents = response.documents;
 
     return documents;
-    // console.log(documents);
+    console.log(documents);
     // Update your frontend with the fetched data here
   } catch (error) {
     console.error("Error fetching data:", error);
