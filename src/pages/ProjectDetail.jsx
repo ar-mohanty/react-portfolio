@@ -7,9 +7,10 @@ const ProjectDetail = () => {
   const { projectId } = useParams();
   const [id, setId] = useState(projectId);
 
-  console.log(id);
+  
 
   useEffect(() => {
+    console.log(id);
     const slider = new Glide(".glide-01", {
       type: "slider",
       focusAt: "center",
