@@ -1,9 +1,9 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
-import scrollImage1 from "../../assets/scrollimage1.png";
-import scrollImage2 from "../../assets/scrollimage2.png";
-import scrollImage3 from "../../assets/scrollimage3.png";
-import scrollImage4 from "../../assets/scrollimage4.png";
+import scrollImage1 from "../../assets/pinterest-carousel.webp";
+import scrollImage2 from "../../assets/fiftconcept-carousel.webp";
+import scrollImage3 from "../../assets/bootstrap-carousel.webp";
+import scrollImage4 from "../../assets/sorting-carousel.webp";
 import { useInView } from "react-intersection-observer";
 
 const ImageSlider = () => {
