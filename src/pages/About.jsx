@@ -53,7 +53,7 @@ const About = () => {
               <motion.img
                 src={profilePic}
                 alt="profile-pic"
-                className="w-96 h-96 object-cover object-top rounded-lg"
+                className="w-96 h-96 object-cover object-top rounded-lg bg-center"
                 initial={{ opacity: 0, x: -100 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 3 }}
