@@ -81,7 +81,7 @@ const Home = () => {
               animate={{ opacity: 1, y: 0, scale: 1.05 }}
               transition={{ duration: 1, delay: 1 }}
             >
-              <a href="#" download>
+              <a href="https://drive.google.com/file/d/1ogiU8ilwiFfi3qx4O7vJt_-pqQORUeJq/view?usp=drive_link" download>
                 Download CV
               </a>
             </motion.button>
