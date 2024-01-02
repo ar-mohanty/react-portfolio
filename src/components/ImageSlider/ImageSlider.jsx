@@ -1,7 +1,7 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
-import scrollImage1 from "../../assets/pinterest-carousel.webp";
-import scrollImage2 from "../../assets/fiftconcept-carousel.webp";
+import scrollImage1 from "../../assets/pintrest-carousel.webp";
+import scrollImage2 from "../../assets/fifthconcept-carousel.webp";
 import scrollImage3 from "../../assets/bootstrap-carousel.webp";
 import scrollImage4 from "../../assets/sorting-carousel.webp";
 import { useInView } from "react-intersection-observer";
