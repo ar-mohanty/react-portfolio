@@ -1,4 +1,4 @@
-import { Client, Databases } from "appwrite";
+import { Client, Databases, Query } from "appwrite";
 
 const client = new Client();
 
@@ -12,7 +12,8 @@ async function fetchData() {
   try {
     const response = await databases.listDocuments(
       import.meta.env.VITE_APPWRITE_PROJECT_DATABASE_ID,
-      import.meta.env.VITE_APPWRITE_PROJECT_COLLECTION_ID
+      import.meta.env.VITE_APPWRITE_PROJECT_COLLECTION_ID,
+      [Query.orderDesc("datetime")]
     );
     const documents = response.documents;
 
