@@ -86,4 +86,12 @@ const cards = [
     url: scrollImage2,
     id: 6,
   },
+  {
+    url: scrollImage3,
+    id: 7,
+  },
+  {
+    url: scrollImage4,
+    id: 8,
+  },
 ];
