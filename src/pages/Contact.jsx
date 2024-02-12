@@ -39,7 +39,7 @@ const Contact = () => {
         />
         <div className="isolate bg-transparent px-6 pb-36 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <div className="flex justify-center items-center py-5">
+            <div className="flex justify-center items-center pb-10">
               <img src={logo} alt="armohanty-logo" className="w-28 rounded"/>
             </div>
             <h2 className="font-satoshi text-4xl font-bold tracking-tight text-zinc-300 lg:text-5xl">
