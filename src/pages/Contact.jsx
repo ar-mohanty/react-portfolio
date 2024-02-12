@@ -39,7 +39,9 @@ const Contact = () => {
         />
         <div className="isolate bg-transparent px-6 pb-36 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <img src={logo} alt="armohanty-logo" className="w-56"/>
+            <div className="flex justify-center items-center">
+              <img src={logo} alt="armohanty-logo" className="w-36"/>
+            </div>
             <h2 className="font-satoshi text-4xl font-bold tracking-tight text-zinc-300 lg:text-5xl">
               Let's Connect
             </h2>
