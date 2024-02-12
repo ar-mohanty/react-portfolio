@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Switch } from "@headlessui/react";
 import { motion } from "framer-motion";
-import logo from "../../src/assets/images/arlogo.svg";
+import logo from "../assets/images/arlogo.svg";
 
 const fadeAnimationVariant = {
   initial: {
