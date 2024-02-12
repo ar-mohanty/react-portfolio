@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Switch } from "@headlessui/react";
 import { motion } from "framer-motion";
+import logo from "../../src/assets/images/arlogo.svg";
 
 const fadeAnimationVariant = {
   initial: {
@@ -38,6 +39,7 @@ const Contact = () => {
         />
         <div className="isolate bg-transparent px-6 pb-36 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
+            <img src={} alt="armohanty-logo"/>
             <h2 className="font-satoshi text-4xl font-bold tracking-tight text-zinc-300 lg:text-5xl">
               Let's Connect
             </h2>
